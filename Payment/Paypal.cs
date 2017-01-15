@@ -1,15 +1,15 @@
+using System;
 using Bangazon.Orders;
 
 namespace Bangazon.Payments
 {
-  public class Paypal: Payment {
-
+  public class Paypal: Payment 
+  {
     public string email { get; set; }
     public string password { get; set; }
-
     public Paypal(Order order): base(order)
     {
-
+      Console.WriteLine("Hey I'm a Paypal account");
     }
     public override string process() 
     {

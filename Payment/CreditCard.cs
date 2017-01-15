@@ -1,3 +1,4 @@
+using System;
 using Bangazon.Orders;
 
 namespace Bangazon.Payments
@@ -8,13 +9,14 @@ namespace Bangazon.Payments
     public string bankName { get; set; }
     public string accountNumber { get; set; }
 
-    public CreditCard(Order order): base(order)
+    public CreditCard(Order monkeyButt): base(monkeyButt)
     {
-
+      Console.WriteLine("Hey I'm a credit card");
     }
     public override string process()
     {
-      return $"You are using a {this.bankName} card, with the account number {this.accountNumber}\n{base.process()}";
+      string parentFunctionality = base.process();
+      return $"You are using a {this.bankName} card, with the account number {this.accountNumber}\n{parentFunctionality}";
       
     }
   }
